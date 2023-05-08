@@ -6,11 +6,7 @@ import { Toaster } from "react-hot-toast";
 export default function App({ Component, pageProps }: AppProps) {
   return (
     <>
-      <Head>
-        <title>Polar</title>
-        <meta content="width=device-width, initial-scale=1" name="viewport" />
-      </Head>
-
+      <title>Polar</title>
       <Component {...pageProps} />
       <Toaster />
     </>

@@ -75,6 +75,7 @@ export default function Home(props: Props) {
   const status = lanyard.discord_status ?? "offline";
 
   return (
+    
     <div className="page-container">
 <motion.main
       variants={pageContainerAnimation}
