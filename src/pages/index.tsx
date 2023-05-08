@@ -104,25 +104,7 @@ export default function Home(props: Props) {
         </motion.p>
       </div>
 
-      <motion.div variants={fadeUpInAnimation} className="col-span-1">
-        <CardHoverEffect className="h-full">
-          <Link
-            href="https://twitter.com/itzpolah"
-            target="_blank"
-            rel="noopener noreferrer"
-            className={clsx(
-              "flex h-full items-center justify-center rounded-lg bg-sky-500/10 text-4xl text-white",
-              hoverClassName
-            )}
-          >
-            <span className="sr-only">Twitter</span>
-            <span className="transform-gpu transition group-hover:-rotate-[10deg] group-hover:scale-[1.3]">
-              <SiTwitter />
-            </span>
-          </Link>
-        </CardHoverEffect>
-      </motion.div>
-      <motion.div variants={fadeUpInAnimation} className="col-span-1">
+      <motion.div variants={fadeUpInAnimation} className="col-span-2">
         <CardHoverEffect className="h-full">
           <Link
             href="https://github.com/polargh"
@@ -168,7 +150,7 @@ export default function Home(props: Props) {
       </motion.div>
         
 
-      <motion.div variants={fadeUpInAnimation} className="lg:col-span-3 md:col-span-3 sm:col-span-6">
+      <motion.div variants={fadeUpInAnimation} className="col-span-3 xs:col-span-6">
         <CardHoverEffect className="h-52">
           {!lanyard?.spotify || !lanyard.spotify.album_art_url ? (
             <Link
