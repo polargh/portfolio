@@ -168,7 +168,7 @@ export default function Home(props: Props) {
       </motion.div>
         
 
-      <motion.div variants={fadeUpInAnimation} className="lg:md:col-span-3 sm:col-span-6">
+      <motion.div variants={fadeUpInAnimation} className="lg:col-span-3 md:col-span-3 sm:col-span-6">
         <CardHoverEffect className="h-52">
           {!lanyard?.spotify || !lanyard.spotify.album_art_url ? (
             <Link
