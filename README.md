@@ -1,10 +1,8 @@
-# website
+# `portfolio`
 
-personal website
+my personal website built using next.js, tailwind, and typescript.
 
-## credits
+## inspired & thank u
 
-thanks to the following
-
-[https://github.com/AnaArsonist/anahoward.me](ana)
-[https://github.com/alii/website](alii)
+• ana arsonist, for [open sourcing her website!](https://github.com/AnaArsonist/anahoward.me)
+• alistair, for [inspiring me, assisting with setup & providing critique](https://github.com/alii/website)
