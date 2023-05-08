@@ -73,21 +73,6 @@ export const getStaticProps: GetStaticProps<Props> = async () => {
 export default function Home(props: Props) {
   const { data: lanyard } = useUpdatingLanyard(discordId, props.lanyard);
   const status = lanyard.discord_status ?? "offline";
-  let actualState = "offline";
-  switch (status) {
-    case "dnd":
-      actualState = "do not disturb";
-      break;
-    case "idle":
-      actualState = "idle";
-      break;
-    case "online":
-      actualState = "online";
-      break;
-    case "offline":
-      actualState = "offline";
-      break;
-  }
 
   return (
     <div className="page-container">
@@ -95,7 +80,7 @@ export default function Home(props: Props) {
       variants={pageContainerAnimation}
       initial="hidden"
       animate="visible"
-      className="grid max-w-3xl grid-cols-6 gap-6"
+      className="mx-auto grid max-w-3xl grid-cols-6 gap-6 px-6 pb-40 pt-16"
     >
       <div className="col-span-4 justify-center">
         <motion.h2 variants={fadeUpInAnimation}><svg width="67.6666666667" height="47.6666666667" viewBox="0 0 205 143" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -183,7 +168,7 @@ export default function Home(props: Props) {
       </motion.div>
         
 
-      <motion.div variants={fadeUpInAnimation} className="col-span-3">
+      <motion.div variants={fadeUpInAnimation} className="lg:md:col-span-3 sm:col-span-6">
         <CardHoverEffect className="h-52">
           {!lanyard?.spotify || !lanyard.spotify.album_art_url ? (
             <Link
