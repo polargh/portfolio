@@ -2,26 +2,75 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
-}
+@import "./excon.css";
+@import "./zodiak.css";
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
+:root {
+  --body-margin-left: max(24px,96px);
+  --body-margin-right: max(24px,96px);
+  --text: #E2E6E8
 }
 
 body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  @apply bg-[#17191B] text-[var(--text)];
+  font-family: 'Excon-Light', sans-serif;
+}
+
+em {
+  font-family: 'Zodiak-Light', sans-serif;
+}
+/* 
+a {
+  text-decoration: none;
+  position: relative;
+  color: var(--text);
+}
+
+a::before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 1px;
+  bottom: 0;
+  left: 0;
+  background-color: var(--text);
+  opacity: 0.5;
+  transition: opacity 0.3s ease-in-out;
+}
+
+a:hover::before {
+  opacity: 1;
+} */
+
+/* * {
+  outline: 1px solid red;
+} */
+
+.link {
+  text-decoration: none;
+  position: relative;
+  color: var(--text); /* Change to your desired link color */
+}
+
+.link::before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: var(--text); /* Change to your desired underline color */
+  opacity: 0.5;
+  transition: opacity 0.3s ease-in-out; /* Change duration and easing as desired */
+}
+
+.link:hover::before {
+  opacity: 1;
+}
+
+.page-container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
