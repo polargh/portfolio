@@ -125,7 +125,7 @@ export default function Home(props: Props) {
       <motion.div variants={fadeUpInAnimation} className="col-span-1">
         <CardHoverEffect className="h-full">
           <Link
-            href="https://twitter.com/itzpolah"
+            href="https://github.com/polargh"
             target="_blank"
             rel="noopener noreferrer"
             className={clsx(
@@ -133,7 +133,7 @@ export default function Home(props: Props) {
               hoverClassName
             )}
           >
-            <span className="sr-only">Twitter</span>
+            <span className="sr-only">GitHub</span>
             <span className="transform-gpu transition group-hover:-rotate-[-10deg] group-hover:scale-[1.3]">
               <SiGithub />
             </span>
