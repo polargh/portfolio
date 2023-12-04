@@ -1,6 +1,5 @@
 /* eslint-disable @next/next/no-img-element */
 import { useUpdatingLanyard } from "@/hooks/lanyard";
-import { getMapURL } from "@/server/apple-maps";
 import { env } from "@/server/env";
 import { getLanyard } from "@/server/lanyard";
 import { age, discordId } from "@/utils/constants";
@@ -50,7 +49,6 @@ const fadeUpInAnimation: Variants = {
 
 export interface Props {
   lanyard: Data;
-  map: string;
   location: string;
 }
 
@@ -58,12 +56,9 @@ export const getStaticProps: GetStaticProps<Props> = async () => {
   const lanyard = await getLanyard(discordId);
   const location = lanyard.kv.location ?? env.DEFAULT_LOCATION;
 
-  const map = getMapURL(location);
-
   return {
     revalidate: 10,
     props: {
-      map,
       location,
       lanyard,
     },
