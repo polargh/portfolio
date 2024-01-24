@@ -194,7 +194,7 @@ export default function Home(props: Props) {
           <CardHoverEffect className="h-52">
             {!lanyard?.spotify || !lanyard.spotify.album_art_url ? (
               <Link
-                href=""
+                href="https://open.spotify.com/playlist/6SGfZ0sHWHMSu7zLRPTDwZ?si=f3f390b2be434198"
                 target="_blank"
                 rel="noopener noreferrer"
                 className={clsx(
